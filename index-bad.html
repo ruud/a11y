@@ -3,9 +3,10 @@
 
 <head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  
-  <title>Bad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes">
+
+  <title>Accessible Home Page - Good and Bad Demonstration - ING - Bad Examples</title>
+
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900" rel="stylesheet">
   <link rel="stylesheet" href="styles/libs/bootstrap/bootstrap.processed.css">
@@ -21,7 +22,14 @@
   <button type="button" class="btn btn-annot btn-annot-title" data-toggle="modal" data-target="#annotModal01">01</button>
   <button type="button" class="btn btn-annot btn-annot-meta" data-toggle="modal" data-target="#annotModal02">02</button>
 
-  <div class="site-header">
+  <header class="site-header" role="banner">
+
+    <div class="skip-links">
+      <a href="#main-menu" rel="nofollow">Skip to Main Menu</a>
+      <a href="#main-content" class="btn-annot-outline btn-annot-outline-on" rel="nofollow">Skip to Main Content</a>
+      <button type="button" class="btn btn-annot btn-annot-skip btn-annot-on" data-toggle="modal" data-target="#annotModal03">03</button>
+    </div>
+
     <button type="button" class="btn btn-annot btn-annot-skip" data-toggle="modal" data-target="#annotModal03">03</button>
 
     <div class="bg-faded pt-2">
@@ -129,9 +137,9 @@
       </div>
     </div>
 
-  </div>
+  </header>
 
-  <div class="btn-annot-outline" id="main-content">
+  <main class="btn-annot-outline" id="main-content" role="main">
 
     <div class="full-cover btn-annot-outline bg-faded">
       <div class="container btn-annot-outline">
@@ -275,9 +283,9 @@
       </div>
     </div>
     
-  </div>
+  </main>
   
-  <div class="full-cover btn-annot-outline site-footer bg-grey">
+  <footer class="full-cover btn-annot-outline site-footer bg-grey" role="footer">
     <div class="container btn-annot-outline text-center">
       <button type="button" class="btn btn-annot" data-toggle="modal" data-target="#annotModal04">04</button>
       
@@ -306,7 +314,7 @@
     <div class="footer-copyright py-2">
       <p class="m-0">&copy; 2017 Copyright</p>
     </div>
-  </div>
+  </footer>
   
   <div class="modal fade" id="a11ycasts" tabindex="-1" role="dialog" aria-labelledby="a11ycastsHeading">
     <div class="modal-dialog modal-lg" role="document">
